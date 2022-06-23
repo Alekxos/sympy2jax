@@ -59,6 +59,8 @@ def sympy2jaxtext(expr, parameters, symbols_in):
         return f"parameters[{len(parameters) - 1}]"
     elif issubclass(expr.func, sympy.Integer):
         return f"{int(expr)}"
+    elif isinstance(expr.func, sympy.core.numbers.Half):
+        return f"{float(1/2)}"
     elif issubclass(expr.func, sympy.Symbol):
         matching_symbols = [i for i in range(len(symbols_in)) if symbols_in[i] == expr]
         if len(matching_symbols) == 0:
