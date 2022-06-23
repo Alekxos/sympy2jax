@@ -24,7 +24,7 @@ description = "Turning SymPy expressions into JAX functions."
 with open(_here / 'README.md', 'r') as f:
     readme = f.read()
 
-url = "https://github.com/MilesCranmer/sympy2jax"
+url = "https://github.com/Alekxos/sympy2jax"
 
 license = "Apache-2.0"
 
