@@ -54,6 +54,7 @@ _jnp_func_lookup = {
 }
 
 def sympy2jaxtext(expr, parameters, symbols_in):
+    print(f"expr: {expr.func}")
     if issubclass(expr.func, sympy.Float):
         parameters.append(float(expr))
         return f"parameters[{len(parameters) - 1}]"
